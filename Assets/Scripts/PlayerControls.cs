@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControls : MonoBehaviour
 {
     // Start is called before the first frame update
 
     public float movementSpeed = 3;
+    public bool isMoving = false;
 
     void Update()
     {
@@ -22,20 +24,26 @@ public class PlayerControls : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
+            isMoving = true;
             transform.position += new Vector3(0, 0, movementSpeed) * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.D))
         {
+            isMoving = true;
             transform.position -= new Vector3(0, 0, movementSpeed) * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.W))
         {
+            isMoving = true;
             transform.position += new Vector3(movementSpeed, 0, 0) * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.S))
         {
+            isMoving = true;
             transform.position -= new Vector3(movementSpeed, 0, 0) * Time.deltaTime;
         }
+
+        isMoving = false;
 
         //to open the menu
         if(Input.GetKeyUp(KeyCode.Escape))
