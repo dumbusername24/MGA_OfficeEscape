@@ -36,5 +36,11 @@ public class PlayerControls : MonoBehaviour
         {
             transform.position -= new Vector3(movementSpeed, 0, 0) * Time.deltaTime;
         }
+
+        //to open the menu
+        if(Input.GetKeyUp(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }
