@@ -18,7 +18,7 @@ public class PlayerControls : MonoBehaviour
         mousePos.y = mousePos.y - objectPos.y;
 
         float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-        transform.GetChild(0).rotation = Quaternion.Euler(new Vector3(0, -1 * angle, 0));
+        transform.GetChild(0).rotation = Quaternion.Euler(new Vector3(0, -1 * angle + 180, 0));
 
         if (Input.GetKey(KeyCode.A))
         {
