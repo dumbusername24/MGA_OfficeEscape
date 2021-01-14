@@ -3521,7 +3521,6 @@ GameObject:
   - component: {fileID: 515965815}
   - component: {fileID: 517376795}
   - component: {fileID: 519097736}
-  - component: {fileID: 519097737}
   m_Layer: 0
   m_Name: Drawer + Clipboard
   m_TagString: Drawer
@@ -3543,21 +3542,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: 34677110e1e47004e9e23f6597432276, type: 3}
---- !u!114 &519097737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519097735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7333942ad9bbd64408acb1df95037552, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: {fileID: 0}
-  clipboard: {fileID: 1685343991963499}
-  painting: {fileID: 0}
 --- !u!1 &519097853
 GameObject:
   m_ObjectHideFlags: 0
@@ -3588,7 +3572,7 @@ GameObject:
   - component: {fileID: 519263034}
   m_Layer: 0
   m_Name: OfficeDesk_1 (Clipboard)
-  m_TagString: Clipboard
+  m_TagString: Drawer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11512,7 +11496,6 @@ GameObject:
   - component: {fileID: 1623460432}
   - component: {fileID: 1624506878}
   - component: {fileID: 1626700839}
-  - component: {fileID: 1626700840}
   m_Layer: 0
   m_Name: Cube.002
   m_TagString: Monalisa
@@ -11534,21 +11517,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 70447b43c54b3c8489782bc25b9b20d9, type: 3}
---- !u!114 &1626700840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1626700838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7333942ad9bbd64408acb1df95037552, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: {fileID: 0}
-  clipboard: {fileID: 0}
-  painting: {fileID: 1626677954}
 --- !u!1 &1626711740
 GameObject:
   m_ObjectHideFlags: 0
@@ -13940,7 +13908,6 @@ GameObject:
   - component: {fileID: 1938829393}
   - component: {fileID: 1940186135}
   - component: {fileID: 1941138555}
-  - component: {fileID: 1939155688}
   m_Layer: 0
   m_Name: Drawer
   m_TagString: Untagged
@@ -13948,21 +13915,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!114 &1939155688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939155687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7333942ad9bbd64408acb1df95037552, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: {fileID: 8296172667781544319}
-  clipboard: {fileID: 0}
-  painting: {fileID: 0}
 --- !u!1 &1939194679
 GameObject:
   m_ObjectHideFlags: 0
@@ -25945,7 +25897,7 @@ GameObject:
   - component: {fileID: 8356269679807643326}
   m_Layer: 0
   m_Name: Video intercomV1
-  m_TagString: Untagged
+  m_TagString: Numberfield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26355,6 +26307,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1804894617}
     m_Modifications:
+    - target: {fileID: 7499105182886292996, guid: de282eeed17010a40a5d66d13cf987b4,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.7882353
+      objectReference: {fileID: 0}
     - target: {fileID: 7499105183426974068, guid: de282eeed17010a40a5d66d13cf987b4,
         type: 3}
       propertyPath: m_Name
@@ -26464,6 +26421,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7499105184549143060, guid: de282eeed17010a40a5d66d13cf987b4,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7499105184549143060, guid: de282eeed17010a40a5d66d13cf987b4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b7ebbb43ffba87942ae04371d7ec4f72,
+        type: 3}
+    - target: {fileID: 7499105184549143061, guid: de282eeed17010a40a5d66d13cf987b4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7499105184549143066, guid: de282eeed17010a40a5d66d13cf987b4,
         type: 3}
