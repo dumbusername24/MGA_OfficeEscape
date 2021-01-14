@@ -9,6 +9,8 @@ public class PlayerControls : MonoBehaviour
 
     public float movementSpeed = 3;
     public bool isMoving = false;
+    public Animator animator;
+
 
     void Update()
     {
@@ -26,24 +28,32 @@ public class PlayerControls : MonoBehaviour
         {
             isMoving = true;
             transform.position += new Vector3(0, 0, movementSpeed) * Time.deltaTime;
+            animator.SetBool("WalkOnOff", true);
         }
         if (Input.GetKey(KeyCode.D))
         {
             isMoving = true;
             transform.position -= new Vector3(0, 0, movementSpeed) * Time.deltaTime;
+            animator.SetBool("WalkOnOff", true);
         }
         if (Input.GetKey(KeyCode.W))
         {
             isMoving = true;
             transform.position += new Vector3(movementSpeed, 0, 0) * Time.deltaTime;
+            animator.SetBool("WalkOnOff", true);
         }
         if (Input.GetKey(KeyCode.S))
         {
             isMoving = true;
             transform.position -= new Vector3(movementSpeed, 0, 0) * Time.deltaTime;
+            animator.SetBool("WalkOnOff", true);
+        }
+        if (!(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D)))
+        {
+            isMoving = false;
+            animator.SetBool("WalkOnOff", false);
         }
 
-        isMoving = false;
 
         //to open the menu
         if(Input.GetKeyUp(KeyCode.Escape))
