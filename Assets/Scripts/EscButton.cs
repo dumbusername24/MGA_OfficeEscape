@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 
 public class EscButton : MonoBehaviour
 {
+    public GameObject drawer;
+    public bool pullDrawer;
     private Inventory inventory;
     [SerializeField] public InventoryLogic inventoryLogic;
 
@@ -52,7 +54,7 @@ public class EscButton : MonoBehaviour
                     {
                         if(item.itemType == "Key")
                         {
-                            //open drawer animation
+                            pullDrawer = true;
                         }
                         else
                         {
@@ -78,6 +80,10 @@ public class EscButton : MonoBehaviour
                     //open input menu for code at the end
                 }
             }
+        }
+        if (pullDrawer == true && drawer.transform.localPosition.z < 2.5)
+        {
+            drawer.transform.position = drawer.transform.position + new Vector3(0, 0, Time.deltaTime*20);
         }
     }
     private void PrintName(GameObject go)

@@ -3163,6 +3163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 134bfacd27daceb48863781c19082225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drawer: {fileID: 519097735}
+  pullDrawer: 0
   inventoryLogic: {fileID: 1965302635}
 --- !u!23 &453616816
 MeshRenderer:
@@ -3521,12 +3523,13 @@ GameObject:
   - component: {fileID: 515965815}
   - component: {fileID: 517376795}
   - component: {fileID: 519097736}
+  - component: {fileID: 519097737}
   m_Layer: 0
   m_Name: Drawer + Clipboard
   m_TagString: Drawer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!64 &519097736
 MeshCollider:
@@ -3542,6 +3545,25 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: 34677110e1e47004e9e23f6597432276, type: 3}
+--- !u!95 &519097737
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519097735}
+  m_Enabled: 0
+  m_Avatar: {fileID: 9000000, guid: da1d9f4dc2a121747a3c82d392f61812, type: 3}
+  m_Controller: {fileID: 9100000, guid: 3cb84ec9629ec9443bf6a740558e676e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &519097853
 GameObject:
   m_ObjectHideFlags: 0
@@ -3626,7 +3648,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519097735}
   m_LocalRotation: {x: -0.5, y: -0.49999997, z: 0.5, w: 0.50000006}
-  m_LocalPosition: {x: 2.3, y: 2.09, z: 1.177}
+  m_LocalPosition: {x: 2.3, y: 2.09, z: 1.17}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 4977107474367515260}
@@ -24869,7 +24891,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685343991963499}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: da1d9f4dc2a121747a3c82d392f61812, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
