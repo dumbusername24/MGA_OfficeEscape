@@ -52,7 +52,7 @@ public class EscButton : MonoBehaviour
 
 
                 }
-                else if(tag == "Drawer")
+                else if(tag == "drawer")
                 {
                     //delete key from inventory (maybe)
                     foreach(Item item in inventory.GetItemList())
@@ -76,13 +76,13 @@ public class EscButton : MonoBehaviour
                     inventory.AddItem(item);
                     inventoryLogic.SetInventory(inventory);
 
-                    GameObject paintingText = GameObject.FindWithTag("Painting_text");
+                    GameObject paintingText = hit.collider.gameObject.transform.GetChild(0).gameObject;
                     paintingText.SetActive(true);
                 }
                 else if(tag == "Clipboard")
                 {
                     //popup UI element
-                    GameObject clipboardText = GameObject.FindWithTag("Clipboard_text");
+                    GameObject clipboardText = hit.collider.gameObject.transform.GetChild(0).gameObject;
                     clipboardText.SetActive(true);
                 }
                 else if(tag == "numberfield")
