@@ -13,6 +13,7 @@ TagManager:
   - Dialogue_background
   - Key
   - Numberfield
+  - Gandalf_text
   layers:
   - Default
   - TransparentFX
