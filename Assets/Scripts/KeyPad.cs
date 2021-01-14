@@ -49,4 +49,8 @@ public class KeyPad : MonoBehaviour
         }
     }
     
+    public void ExitKeypad()
+    {
+        transform.gameObject.SetActive(false);
+    }
 }
