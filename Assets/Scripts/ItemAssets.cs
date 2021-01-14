@@ -4,21 +4,27 @@ using UnityEngine;
 
 public class ItemAssets : MonoBehaviour
 {
-    public static ItemAssets Instance { 
-        get 
-        { 
-            if(instance == null)
-            {
-                instance = new ItemAssets();
-            }
-            return instance;
-        }
-    }
-    private static ItemAssets instance = null;
+    //public static ItemAssets Instance { 
+    //    get 
+    //    { 
+    //        if(instance == null)
+    //        {
+    //            instance = new ItemAssets();
+    //        }
+    //        return instance;
+    //    }
+    //}
+    //private static ItemAssets instance = null;
     
-    private ItemAssets()
-    {
+    //private ItemAssets()
+    //{
 
+    //}
+
+    public static ItemAssets Instance { get; private set; }
+    private void Awake()
+    {
+        Instance = this;
     }
 
 

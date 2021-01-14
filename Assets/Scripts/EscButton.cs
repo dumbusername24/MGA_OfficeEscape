@@ -7,6 +7,8 @@ using UnityEngine.EventSystems;
 
 public class EscButton : MonoBehaviour
 {
+    public GameObject drawer;
+    public bool pullDrawer;
     private Inventory inventory;
     [SerializeField] public InventoryLogic inventoryLogic;
 
@@ -35,7 +37,7 @@ public class EscButton : MonoBehaviour
             if (hit.transform != null)
             {
                 var tag = hit.collider.gameObject.tag;
-                PrintName(hit.transform.gameObject);
+                //Debug.Log(hit.collider.gameObject.name);
                 //add item to inventory
                 if(tag == "Key")
                 {
@@ -59,7 +61,7 @@ public class EscButton : MonoBehaviour
                     {
                         if(item.itemType == "Key")
                         {
-                            //open drawer animation
+                            pullDrawer = true;
                         }
                         else
                         {
@@ -84,16 +86,18 @@ public class EscButton : MonoBehaviour
                     //popup UI element
                     GameObject clipboardText = hit.collider.gameObject.transform.GetChild(0).gameObject;
                     clipboardText.SetActive(true);
+                    Debug.Log("Clipboard!");
                 }
-                else if(tag == "numberfield")
+                else if(tag == "Numberfield")
                 {
                     //open input menu for code at the end
+                    Debug.Log("Numberfield!");
                 }
             }
         }
-    }
-    private void PrintName(GameObject go)
-    {
-        Debug.Log(go.name);
+        if (pullDrawer == true && drawer.transform.localPosition.z < 2.5)
+        {
+            drawer.transform.position = drawer.transform.position + new Vector3(0, 0, Time.deltaTime*20);
+        }
     }
 }
