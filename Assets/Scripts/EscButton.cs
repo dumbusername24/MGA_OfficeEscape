@@ -27,6 +27,10 @@ public class EscButton : MonoBehaviour
             SceneManager.LoadScene(0);
         }
 
+        StartCoroutine(MouseClick());
+    }
+
+    IEnumerator MouseClick(){
         //clicking on Objects to add them to inventory
         if (Input.GetMouseButtonDown(0))
         {
@@ -50,25 +54,38 @@ public class EscButton : MonoBehaviour
                     GameObject keyText = hit.collider.gameObject.transform.GetChild(0).gameObject;
                     keyText.SetActive(true);
                     
-                    //hit.collider.gameObject.SetActive(false);
+                    yield return new WaitForSeconds(3);
+
+                    hit.collider.gameObject.SetActive(false);
 
 
                 }
-                else if(tag == "drawer")
+                else if(tag == "Drawer")
                 {
-                    //delete key from inventory (maybe)
-                    foreach(Item item in inventory.GetItemList())
+                    if(inventory.GetItemList().Count == 0)
                     {
-                        if(item.itemType == "Key")
+                        //popup you shall not pass?
+                        GameObject gandalfText = hit.collider.transform.GetChild(0).gameObject;
+                        gandalfText.SetActive(true);
+
+                        yield return new WaitForSeconds(3);
+
+                        gandalfText.SetActive(false);
+                    }
+                    else{
+                        //delete key from inventory (maybe)
+                        foreach(Item item in inventory.GetItemList())
                         {
-                            pullDrawer = true;
-                        }
-                        else
-                        {
-                            //popup you shall not pass?
+                            if(item.itemType == "Key")
+                            {
+                                pullDrawer = true;
+                            }
+                            else
+                            {
+                                //popup you shall not pass?
+                            }
                         }
                     }
-
                 }
                 else if(tag == "Monalisa")
                 {
@@ -80,6 +97,10 @@ public class EscButton : MonoBehaviour
 
                     GameObject paintingText = hit.collider.gameObject.transform.GetChild(0).gameObject;
                     paintingText.SetActive(true);
+
+                    yield return new WaitForSeconds(3);
+
+                    paintingText.SetActive(false);
                 }
                 else if(tag == "Clipboard")
                 {
@@ -87,6 +108,10 @@ public class EscButton : MonoBehaviour
                     GameObject clipboardText = hit.collider.gameObject.transform.GetChild(0).gameObject;
                     clipboardText.SetActive(true);
                     Debug.Log("Clipboard!");
+
+                    yield return new WaitForSeconds(3);
+
+                    clipboardText.SetActive(false);
                 }
                 else if(tag == "Numberfield")
                 {
