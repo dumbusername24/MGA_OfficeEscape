@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Monalisa
   - Key
+  - Drawer
+  - Clipboard
   layers:
   - Default
   - TransparentFX

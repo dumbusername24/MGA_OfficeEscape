@@ -33,7 +33,7 @@ public class EscButton : MonoBehaviour
             Physics.Raycast(ray, out hit);
             if (hit.transform != null)
             {
-                var tag = hit.transform.gameObject.tag;
+                var tag = hit.collider.gameObject.tag;
                 PrintName(hit.transform.gameObject);
                 //add item to inventory
                 if(tag == "Key")
@@ -42,21 +42,38 @@ public class EscButton : MonoBehaviour
                     item.itemType = "Key";
                     item.GetSprite();
                     inventory.AddItem(item);
-                    hit.transform.gameObject.SetActive(false);
+                    inventoryLogic.SetInventory(inventory);
+                    hit.collider.gameObject.SetActive(false);
                 }
-                if(tag == "drawer")
+                else if(tag == "drawer")
                 {
                     //delete key from inventory (maybe)
-                    //open drawer animation
+                    foreach(Item item in inventory.GetItemList())
+                    {
+                        if(item.itemType == "Key")
+                        {
+                            //open drawer animation
+                        }
+                        else
+                        {
+                            //popup you shall not pass?
+                        }
+                    }
+
                 }
-                if(tag == "Monalisa")
+                else if(tag == "Monalisa")
                 {
                     Item item = new Item();
                     item.itemType = "Paper";
                     item.GetSprite();
                     inventory.AddItem(item);
+                    inventoryLogic.SetInventory(inventory);
                 }
-                if(tag == "numberfield")
+                else if(tag == "Clipboard")
+                {
+                    //popup UI element
+                }
+                else if(tag == "numberfield")
                 {
                     //open input menu for code at the end
                 }
