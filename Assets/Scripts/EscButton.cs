@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class EscButton : MonoBehaviour
 {
     public GameObject drawer;
+    public GameObject keyPad;
     public bool pullDrawer;
     private Inventory inventory;
     [SerializeField] public InventoryLogic inventoryLogic;
@@ -80,6 +81,7 @@ public class EscButton : MonoBehaviour
                 {
                     //open input menu for code at the end
                     Debug.Log("Numberfield!");
+                    keyPad.SetActive(true);
                 }
             }
         }
