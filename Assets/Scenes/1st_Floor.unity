@@ -4317,6 +4317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawer: {fileID: 519097735}
+  keyPad: {fileID: 2088817047}
   pullDrawer: 0
   inventoryLogic: {fileID: 1965302635}
 --- !u!1 &419354295

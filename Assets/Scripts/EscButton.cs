@@ -117,6 +117,7 @@ public class EscButton : MonoBehaviour
                 else if(tag == "Numberfield")
                 {
                     //open input menu for code at the end
+                    keyPad.SetActive(true);
                     Debug.Log("Numberfield!");
                 }
             }
