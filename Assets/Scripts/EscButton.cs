@@ -47,7 +47,7 @@ public class EscButton : MonoBehaviour
                     inventoryLogic.SetInventory(inventory);
                     hit.collider.gameObject.SetActive(false);
                 }
-                else if(tag == "drawer")
+                else if(tag == "Drawer")
                 {
                     //delete key from inventory (maybe)
                     foreach(Item item in inventory.GetItemList())
@@ -75,7 +75,7 @@ public class EscButton : MonoBehaviour
                 {
                     //popup UI element
                 }
-                else if(tag == "numberfield")
+                else if(tag == "Numberfield")
                 {
                     //open input menu for code at the end
                 }
