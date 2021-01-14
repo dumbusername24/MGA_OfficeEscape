@@ -36,7 +36,7 @@ public class EscButton : MonoBehaviour
             if (hit.transform != null)
             {
                 var tag = hit.collider.gameObject.tag;
-                PrintName(hit.transform.gameObject);
+                //Debug.Log(hit.collider.gameObject.name);
                 //add item to inventory
                 if(tag == "Key")
                 {
@@ -74,10 +74,12 @@ public class EscButton : MonoBehaviour
                 else if(tag == "Clipboard")
                 {
                     //popup UI element
+                    Debug.Log("Clipboard!");
                 }
                 else if(tag == "Numberfield")
                 {
                     //open input menu for code at the end
+                    Debug.Log("Numberfield!");
                 }
             }
         }
@@ -85,9 +87,5 @@ public class EscButton : MonoBehaviour
         {
             drawer.transform.position = drawer.transform.position + new Vector3(0, 0, Time.deltaTime*20);
         }
-    }
-    private void PrintName(GameObject go)
-    {
-        Debug.Log(go.name);
     }
 }

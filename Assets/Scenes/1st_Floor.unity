@@ -25917,6 +25917,7 @@ GameObject:
   - component: {fileID: 6928342168848738802}
   - component: {fileID: 3682505328628159755}
   - component: {fileID: 8356269679807643326}
+  - component: {fileID: 3109230975743123928}
   m_Layer: 0
   m_Name: Video intercomV1
   m_TagString: Numberfield
@@ -25924,6 +25925,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &3109230975743123928
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3109230975743123927}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.207046, y: 0.1508001, z: 0.3210001}
+  m_Center: {x: 2.3283078e-10, y: -0.0000009800195, z: 0.11050027}
 --- !u!33 &3444045880004219961
 MeshFilter:
   m_ObjectHideFlags: 0
