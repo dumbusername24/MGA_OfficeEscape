@@ -1466,6 +1466,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1655047439}
+    - target: {fileID: 4279848908635888571, guid: f139171289ce13b499d74928534496dc,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4279848908635888571, guid: f139171289ce13b499d74928534496dc,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4279848908635888571, guid: f139171289ce13b499d74928534496dc,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4279848908881814137, guid: f139171289ce13b499d74928534496dc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1600,6 +1615,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1985715576}
     m_Modifications:
+    - target: {fileID: 8640075204409970313, guid: 9b957081f5460b54dab7458bf1a41527,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8640075204409970313, guid: 9b957081f5460b54dab7458bf1a41527,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8640075204409970313, guid: 9b957081f5460b54dab7458bf1a41527,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8640075204409970316, guid: 9b957081f5460b54dab7458bf1a41527,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1614,6 +1644,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 8640075204409970318, guid: 9b957081f5460b54dab7458bf1a41527,
+        type: 3}
+      propertyPath: m_Colors.m_NormalColor.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8640075204601104965, guid: 9b957081f5460b54dab7458bf1a41527,
         type: 3}

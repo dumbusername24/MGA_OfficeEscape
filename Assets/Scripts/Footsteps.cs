@@ -17,12 +17,12 @@ public class Footsteps : PlayerControls
     void Update()
     {
         //if(cc.velocity.magnitude > 2f && GetComponent<AudioSource>().isPlaying == false)
-        if(isMoving == true && GetComponent<AudioSource>().isPlaying == false)
+        if(cc.isMoving == true && GetComponent<AudioSource>().isPlaying == false)
         {
             GetComponent<AudioSource>().Play();
         }
         //else if(GetComponent<AudioSource>().isPlaying == true && cc.velocity.magnitude < 2f)
-        else if(GetComponent<AudioSource>().isPlaying == true && isMoving == false)
+        else if(GetComponent<AudioSource>().isPlaying == true && cc.isMoving == false)
         {
             GetComponent<AudioSource>().Pause();
         }

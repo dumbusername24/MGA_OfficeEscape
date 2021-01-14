@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Key_text
+  - Drawer
+  - Clipboard
+  - Clipboard_text
+  - Painting_text
+  - Monalisa
+  - Dialogue_background
+  - Key
+  - Numberfield
   layers:
   - Default
   - TransparentFX

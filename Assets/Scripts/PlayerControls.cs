@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//using System.Threading.Tasks.Dataflow;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,10 +8,17 @@ public class PlayerControls : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float movementSpeed = 3;
+    public float movementSpeed = 1000;
     public bool isMoving = false;
     public Animator animator;
+    //public Rigidbody rb;
 
+
+    void Start()
+    {
+        /* rb = GetComponent<Rigidbody>();
+        rb.isKinematic = true; */
+    }
 
     void Update()
     {
@@ -28,24 +36,28 @@ public class PlayerControls : MonoBehaviour
         {
             isMoving = true;
             transform.position += new Vector3(0, 0, movementSpeed) * Time.deltaTime;
+            //rb.MovePosition(transform.position);
             animator.SetBool("WalkOnOff", true);
         }
         if (Input.GetKey(KeyCode.D))
         {
             isMoving = true;
             transform.position -= new Vector3(0, 0, movementSpeed) * Time.deltaTime;
+            //rb.MovePosition(transform.position);
             animator.SetBool("WalkOnOff", true);
         }
         if (Input.GetKey(KeyCode.W))
         {
             isMoving = true;
             transform.position += new Vector3(movementSpeed, 0, 0) * Time.deltaTime;
+            //rb.MovePosition(transform.position);
             animator.SetBool("WalkOnOff", true);
         }
         if (Input.GetKey(KeyCode.S))
         {
             isMoving = true;
             transform.position -= new Vector3(movementSpeed, 0, 0) * Time.deltaTime;
+            //rb.MovePosition(transform.position);
             animator.SetBool("WalkOnOff", true);
         }
         if (!(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D)))
@@ -60,5 +72,8 @@ public class PlayerControls : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
+
+        
     }
+
 }
