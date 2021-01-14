@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System.Net;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -43,9 +44,15 @@ public class EscButton : MonoBehaviour
                     item.GetSprite();
                     inventory.AddItem(item);
                     inventoryLogic.SetInventory(inventory);
+
+                    GameObject keyText = hit.collider.gameObject.transform.GetChild(1).gameObject;
+                    keyText.SetActive(true);
+                    
                     hit.collider.gameObject.SetActive(false);
+
+
                 }
-                else if(tag == "drawer")
+                else if(tag == "Drawer")
                 {
                     //delete key from inventory (maybe)
                     foreach(Item item in inventory.GetItemList())
@@ -68,10 +75,15 @@ public class EscButton : MonoBehaviour
                     item.GetSprite();
                     inventory.AddItem(item);
                     inventoryLogic.SetInventory(inventory);
+
+                    GameObject paintingText = GameObject.FindWithTag("Painting_text");
+                    paintingText.SetActive(true);
                 }
                 else if(tag == "Clipboard")
                 {
                     //popup UI element
+                    GameObject clipboardText = GameObject.FindWithTag("Clipboard_text");
+                    clipboardText.SetActive(true);
                 }
                 else if(tag == "numberfield")
                 {

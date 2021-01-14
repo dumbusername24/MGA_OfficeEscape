@@ -591,7 +591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &98266947
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2639,7 +2639,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 294321083}
-  - component: {fileID: 294321085}
   m_Layer: 0
   m_Name: Right Wall
   m_TagString: Untagged
@@ -2662,19 +2661,6 @@ Transform:
   m_Father: {fileID: 663276945}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &294321085
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294321082}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &311507972
 GameObject:
   m_ObjectHideFlags: 0
@@ -3164,6 +3150,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryLogic: {fileID: 1965302635}
+  keyText: {fileID: 0}
+  clipboardText: {fileID: 0}
+  paintingText: {fileID: 0}
 --- !u!23 &453616816
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3521,7 +3510,6 @@ GameObject:
   - component: {fileID: 515965815}
   - component: {fileID: 517376795}
   - component: {fileID: 519097736}
-  - component: {fileID: 519097737}
   m_Layer: 0
   m_Name: Drawer + Clipboard
   m_TagString: Drawer
@@ -3543,21 +3531,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: 34677110e1e47004e9e23f6597432276, type: 3}
---- !u!114 &519097737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519097735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7333942ad9bbd64408acb1df95037552, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: {fileID: 0}
-  clipboard: {fileID: 1685343991963499}
-  painting: {fileID: 0}
 --- !u!1 &519097853
 GameObject:
   m_ObjectHideFlags: 0
@@ -3897,7 +3870,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 551820640}
-  - component: {fileID: 551820642}
   m_Layer: 0
   m_Name: Bottom Wall
   m_TagString: Untagged
@@ -3932,19 +3904,6 @@ Transform:
   m_Father: {fileID: 663276945}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &551820642
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551820639}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &553260235
 Transform:
   m_ObjectHideFlags: 0
@@ -4106,7 +4065,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &569955064
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6630,7 +6589,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 950431992}
-  - component: {fileID: 950431994}
   m_Layer: 0
   m_Name: Separator
   m_TagString: Untagged
@@ -6653,19 +6611,6 @@ Transform:
   m_Father: {fileID: 663276945}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &950431994
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 950431991}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &966121899
 GameObject:
   m_ObjectHideFlags: 0
@@ -7257,7 +7202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1099792531
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9822,7 +9767,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1421484808}
-  - component: {fileID: 1421484810}
   m_Layer: 0
   m_Name: Left Wall
   m_TagString: Untagged
@@ -9846,19 +9790,6 @@ Transform:
   m_Father: {fileID: 663276945}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1421484810
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421484807}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1421943187
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11493,6 +11424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1626367152}
+  - component: {fileID: 1626677955}
   m_Layer: 0
   m_Name: Mona Lisa
   m_TagString: Monalisa
@@ -11500,6 +11432,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!65 &1626677955
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626677954}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.1907315, y: 0.2970707, z: 8.987475}
+  m_Center: {x: -0.6121898, y: -1.2373168, z: 1.3770088}
 --- !u!1 &1626700838
 GameObject:
   m_ObjectHideFlags: 0
@@ -11512,7 +11457,6 @@ GameObject:
   - component: {fileID: 1623460432}
   - component: {fileID: 1624506878}
   - component: {fileID: 1626700839}
-  - component: {fileID: 1626700840}
   m_Layer: 0
   m_Name: Cube.002
   m_TagString: Monalisa
@@ -11534,21 +11478,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 70447b43c54b3c8489782bc25b9b20d9, type: 3}
---- !u!114 &1626700840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1626700838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7333942ad9bbd64408acb1df95037552, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: {fileID: 0}
-  clipboard: {fileID: 0}
-  painting: {fileID: 1626677954}
 --- !u!1 &1626711740
 GameObject:
   m_ObjectHideFlags: 0
@@ -13088,7 +13017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1825567213
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13940,7 +13869,6 @@ GameObject:
   - component: {fileID: 1938829393}
   - component: {fileID: 1940186135}
   - component: {fileID: 1941138555}
-  - component: {fileID: 1939155688}
   m_Layer: 0
   m_Name: Drawer
   m_TagString: Untagged
@@ -13948,21 +13876,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!114 &1939155688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939155687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7333942ad9bbd64408acb1df95037552, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: {fileID: 8296172667781544319}
-  clipboard: {fileID: 0}
-  painting: {fileID: 0}
 --- !u!1 &1939194679
 GameObject:
   m_ObjectHideFlags: 0
@@ -13992,7 +13905,7 @@ GameObject:
   - component: {fileID: 1938821323}
   - component: {fileID: 1939256410}
   m_Layer: 0
-  m_Name: OfficeDesk_1 (3)
+  m_Name: OfficeDesk_1 (Key)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14347,7 +14260,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1953542087}
-  - component: {fileID: 1953542089}
   m_Layer: 0
   m_Name: Top Wall
   m_TagString: Untagged
@@ -14372,19 +14284,6 @@ Transform:
   m_Father: {fileID: 663276945}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1953542089
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953542086}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1963607063
 GameObject:
   m_ObjectHideFlags: 0
