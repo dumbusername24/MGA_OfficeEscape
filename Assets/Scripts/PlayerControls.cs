@@ -7,10 +7,15 @@ public class PlayerControls : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float movementSpeed = 3;
+    public float movementSpeed = 1000;
     public bool isMoving = false;
     public Animator animator;
 
+
+    void Start()
+    {
+        
+    }
 
     void Update()
     {
@@ -60,5 +65,8 @@ public class PlayerControls : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
+
+        
     }
+
 }
