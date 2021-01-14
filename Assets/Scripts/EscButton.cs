@@ -45,10 +45,10 @@ public class EscButton : MonoBehaviour
                     inventory.AddItem(item);
                     inventoryLogic.SetInventory(inventory);
 
-                    GameObject keyText = hit.collider.gameObject.transform.GetChild(1).gameObject;
+                    GameObject keyText = hit.collider.gameObject.transform.GetChild(0).gameObject;
                     keyText.SetActive(true);
                     
-                    hit.collider.gameObject.SetActive(false);
+                    //hit.collider.gameObject.SetActive(false);
 
 
                 }
