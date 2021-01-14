@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class KeyPad : MonoBehaviour
 {
@@ -24,17 +25,7 @@ public class KeyPad : MonoBehaviour
         {
             if (state == 1)
             {
-                if (timer < 1)
-                {
-                    green.SetActive(true);
-                    timer += Time.deltaTime;
-                }
-                else
-                {
-                    green.SetActive(false);
-                    timer = 0;
-                    state = 0;
-                }
+                SceneManager.LoadSceneAsync("MenuUI");
             }
             else if (timer < 1)
             {
