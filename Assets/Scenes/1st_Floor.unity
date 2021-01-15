@@ -10848,7 +10848,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1255989973
 Transform:
   m_ObjectHideFlags: 0
@@ -19684,6 +19684,8 @@ MonoBehaviour:
   - {fileID: 130559311}
   red: {fileID: 1406808499}
   green: {fileID: 230419191}
+  currentScene:
+    m_Handle: 0
 --- !u!114 &2088817049
 MonoBehaviour:
   m_ObjectHideFlags: 0
