@@ -9,6 +9,7 @@ public class EscButton : MonoBehaviour
 {
     public GameObject drawer;
     public GameObject keyPad;
+    public GameObject radio;
     public bool pullDrawer;
     private Inventory inventory;
     [SerializeField] public InventoryLogic inventoryLogic;
@@ -42,7 +43,7 @@ public class EscButton : MonoBehaviour
             if (hit.transform != null)
             {
                 var tag = hit.collider.gameObject.tag;
-                //Debug.Log(hit.collider.gameObject.name);
+                Debug.Log(hit.collider.gameObject.name);
                 //add item to inventory
                 if(tag == "Key")
                 {
@@ -119,6 +120,18 @@ public class EscButton : MonoBehaviour
                     //open input menu for code at the end
                     keyPad.SetActive(true);
                     Debug.Log("Numberfield!");
+                }
+                else if(tag == "Radio")
+                {
+                    if(hit.collider.gameObject.GetComponent<AudioSource>().isPlaying == false)
+                    {
+                        hit.collider.gameObject.GetComponent<AudioSource>().Play();
+                    }
+                    else if(hit.collider.gameObject.GetComponent<AudioSource>().isPlaying == true)
+                    {
+                        hit.collider.gameObject.GetComponent<AudioSource>().Pause();
+                    }
+                    
                 }
             }
         }
