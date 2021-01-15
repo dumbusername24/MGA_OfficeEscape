@@ -11,6 +11,7 @@ public class PlayerControls : MonoBehaviour
     public float movementSpeed = 1000;
     public bool isMoving = false;
     public Animator animator;
+    //public Timer timer;
     //public Rigidbody rb;
 
 
@@ -70,6 +71,7 @@ public class PlayerControls : MonoBehaviour
         //to open the menu
         if(Input.GetKeyUp(KeyCode.Escape))
         {
+            Timer.timerOnOff = false;
             SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive);
         }
 

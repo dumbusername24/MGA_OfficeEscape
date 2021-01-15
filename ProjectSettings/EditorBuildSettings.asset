@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PauseMenu.unity
     guid: 8252abe8173402848bac18c735bbcd13
+  - enabled: 1
+    path: Assets/Scenes/Timer.unity
+    guid: 58b1840dc2769c54d90f27ce1f27643d
   m_configObjects: {}

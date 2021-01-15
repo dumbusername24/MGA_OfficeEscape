@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     private float time = 0;
     private int seconds = 0;
     private int minutes = 0;
-    public bool timerOnOff;
+    static public bool timerOnOff = true;
 
     private void Start()
     {
