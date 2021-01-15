@@ -70,7 +70,7 @@ public class PlayerControls : MonoBehaviour
         //to open the menu
         if(Input.GetKeyUp(KeyCode.Escape))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive);
         }
 
         

@@ -4,13 +4,6 @@ using UnityEngine;
 
 public class Item
 {
-    //public enum ItemType
-    //{
-    //    Key,
-    //    Clipboard,
-    //    Paper,
-    //}
-
     public string itemType;
 
     public Sprite GetSprite()
