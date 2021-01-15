@@ -130,7 +130,7 @@ public class EscButton : MonoBehaviour
         }
         if (pullDrawer == true && drawer.transform.localPosition.z < 2.5)
         {
-            drawer.transform.position = drawer.transform.position + new Vector3(0, 0, Time.deltaTime*20);
+            drawer.transform.localPosition = drawer.transform.localPosition + new Vector3(0, 0, Time.deltaTime*20);
         }
     }
 }
