@@ -32,6 +32,7 @@ public class MenuHandler : MonoBehaviour
 
     public void ContinueGame()
     {
+        Timer.timerOnOff = true;
         SceneManager.UnloadSceneAsync(3);
     }
 }
