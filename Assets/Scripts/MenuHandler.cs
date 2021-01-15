@@ -13,7 +13,7 @@ public class MenuHandler : MonoBehaviour
     public void PlayGame()
     {
         //this has to be the index in the build queue (file > build settings)
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
     //public void BackToMainMenu()

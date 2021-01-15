@@ -123,13 +123,13 @@ public class EscButton : MonoBehaviour
                 }
                 else if(tag == "Radio")
                 {
-                    if(hit.collider.gameObject.GetComponent<AudioSource>().isPlaying == false)
+                    if(hit.collider.GetComponent<AudioSource>().isPlaying == false)
                     {
-                        hit.collider.gameObject.GetComponent<AudioSource>().Play();
+                        hit.collider.GetComponent<AudioSource>().Play();
                     }
-                    else if(hit.collider.gameObject.GetComponent<AudioSource>().isPlaying == true)
+                    else if(hit.collider.GetComponent<AudioSource>().isPlaying == true)
                     {
-                        hit.collider.gameObject.GetComponent<AudioSource>().Pause();
+                        hit.collider.GetComponent<AudioSource>().Pause();
                     }
                     
                 }
