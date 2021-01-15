@@ -234,6 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerObject: {fileID: 1065151131}
+  timerOnOff: 1
 --- !u!1 &1065151131
 GameObject:
   m_ObjectHideFlags: 0
