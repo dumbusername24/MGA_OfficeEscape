@@ -23,11 +23,6 @@ public class EscButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
-            SceneManager.LoadScene(0);
-        }
-
         StartCoroutine(MouseClick());
     }
 
@@ -63,9 +58,20 @@ public class EscButton : MonoBehaviour
                 }
                 else if(tag == "Drawer")
                 {
-                    if(inventory.GetItemList().Count == 0)
+                    bool hasKey = false;
+                    
+                    foreach(Item item in inventory.GetItemList())
                     {
-                        //popup you shall not pass?
+                        if(item.itemType == "Key")
+                        {
+                            pullDrawer = true;
+                            hasKey = true;
+                        }
+                    }
+
+                    //popup you shall not pass
+                    if (!hasKey)
+                    {
                         GameObject gandalfText = hit.collider.transform.GetChild(0).gameObject;
                         gandalfText.SetActive(true);
 
@@ -73,20 +79,7 @@ public class EscButton : MonoBehaviour
 
                         gandalfText.SetActive(false);
                     }
-                    else{
-                        //delete key from inventory (maybe)
-                        foreach(Item item in inventory.GetItemList())
-                        {
-                            if(item.itemType == "Key")
-                            {
-                                pullDrawer = true;
-                            }
-                            else
-                            {
-                                //popup you shall not pass?
-                            }
-                        }
-                    }
+                    
                 }
                 else if(tag == "Monalisa")
                 {

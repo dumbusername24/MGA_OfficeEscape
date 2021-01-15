@@ -7,24 +7,31 @@ using TMPro;
 
 public class MenuHandler : MonoBehaviour
 {
-    public GameObject MainMenu;
-    public GameObject PauseMenu;
-
+    //
+    // Start Menu
+    //
     public void PlayGame()
     {
         //this has to be the index in the build queue (file > build settings)
         SceneManager.LoadScene(2);
     }
 
-    //public void BackToMainMenu()
-    //{
-    //    //this has to be the index in the build queue (file > build settings)
-    //    PauseMenu.SetActive(false);
-    //    MainMenu.SetActive(true);
-    //}
-
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    //
+    // Pause Menu
+    //
+    public void Backtomainmenu()
+    {
+        //this has to be the index in the build queue (file > build settings)
+        SceneManager.LoadScene(0);
+    }
+
+    public void ContinueGame()
+    {
+        SceneManager.UnloadSceneAsync(3);
     }
 }
