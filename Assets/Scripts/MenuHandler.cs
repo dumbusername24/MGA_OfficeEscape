@@ -13,7 +13,13 @@ public class MenuHandler : MonoBehaviour
     public void PlayGame()
     {
         //this has to be the index in the build queue (file > build settings)
-        SceneManager.LoadScene(1);
+        //SceneManager.LoadScene(1);
+        SceneLoader.StartGame();
+    }
+
+    public void NextLevel()
+    {
+        SceneLoader.Progress();
     }
 
     public void QuitGame()
@@ -27,12 +33,14 @@ public class MenuHandler : MonoBehaviour
     public void Backtomainmenu()
     {
         //this has to be the index in the build queue (file > build settings)
-        SceneManager.LoadScene(0);
+        //SceneManager.LoadScene(0);
+        SceneLoader.ReturnToMenu();
     }
 
     public void ContinueGame()
     {
         Timer.timerOnOff = true;
-        SceneManager.UnloadSceneAsync(3);
+        //SceneManager.UnloadSceneAsync(3);
+        SceneLoader.UnloadPauseMenu();
     }
 }

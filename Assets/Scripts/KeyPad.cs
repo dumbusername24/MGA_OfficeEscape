@@ -27,14 +27,15 @@ public class KeyPad : MonoBehaviour
         {
             if (state == 1)
             {
-                if(currentScene.name == "Start")
-                {
-                    SceneManager.LoadSceneAsync("1st_Floor");
-                }
-                else if(currentScene.name == "1st_Floor")
-                {
-                    SceneManager.LoadSceneAsync("MenuUI");
-                }
+                //if(currentScene.name == "Start")
+                //{
+                //    //SceneManager.LoadSceneAsync("1st_Floor");
+                //}
+                //else if(currentScene.name == "1st_Floor")
+                //{
+                //    //SceneManager.LoadSceneAsync("MenuUI");
+                //}
+                SceneLoader.EndLevel();
             }
             else if (timer < 1)
             {

@@ -15,6 +15,7 @@ public class Timer : MonoBehaviour
     private void Start()
     {
         timer = timerObject.GetComponent<TextMeshProUGUI>();
+        timerOnOff = true;
     }
     void Update()
     {

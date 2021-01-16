@@ -72,7 +72,8 @@ public class PlayerControls : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.Escape))
         {
             Timer.timerOnOff = false;
-            SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive);
+            //SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive);
+            SceneLoader.LoadPauseMenu();
         }
 
         
