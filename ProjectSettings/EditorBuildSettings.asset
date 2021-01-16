@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/PauseMenu.unity
     guid: 8252abe8173402848bac18c735bbcd13
   - enabled: 1
-    path: Assets/Scenes/CodeInput.unity
-    guid: 285dd4cc135a57643bcc7b5038d03907
-  - enabled: 1
     path: Assets/Scenes/Timer.unity
     guid: 58b1840dc2769c54d90f27ce1f27643d
   - enabled: 1
@@ -26,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1st_Floor.unity
     guid: 878f6abe192ecdf41bb6e57cc1f317ea
+  - enabled: 1
+    path: Assets/Scenes/VictoryScreen.unity
+    guid: 653d4a7c790ac224b9f7d0b95fe856aa
   m_configObjects: {}

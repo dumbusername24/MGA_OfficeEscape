@@ -35,7 +35,7 @@ public class KeyPad : MonoBehaviour
                 //{
                 //    //SceneManager.LoadSceneAsync("MenuUI");
                 //}
-                SceneLoader.Progress();
+                SceneLoader.EndLevel();
             }
             else if (timer < 1)
             {

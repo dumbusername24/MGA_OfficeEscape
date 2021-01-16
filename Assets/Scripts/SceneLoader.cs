@@ -11,9 +11,9 @@ public class SceneLoader : MonoBehaviour
     static private SceneLoader sceneLoader;
     const int MainMenu = 1;
     const int PauseMenu = 2;
-    const int VictoryScreen = 3;
-    const int Timer = 4;
-    const int FirstLevel = 5;
+    const int VictoryScreen = 6;
+    const int Timer = 3;
+    const int FirstLevel = 4;
 
     private void Start()
     {
@@ -26,6 +26,10 @@ public class SceneLoader : MonoBehaviour
     {
         if (!loading)
         {
+            if (SceneManager.GetSceneByBuildIndex(VictoryScreen).IsValid())
+            {
+                SceneManager.UnloadSceneAsync(VictoryScreen);
+            }
             sceneIndex++;
             if (loadedScenes.Contains(sceneIndex))
             {
@@ -37,9 +41,9 @@ public class SceneLoader : MonoBehaviour
                 AsyncOperation load = SceneManager.LoadSceneAsync(sceneIndex, LoadSceneMode.Additive);
                 loading = true;
                 sceneLoader.StartCoroutine(sceneLoader.CheckLoading(load));
-                SceneManager.UnloadSceneAsync(sceneIndex - 1);
+                //SceneManager.UnloadSceneAsync(sceneIndex - 1);
                 loadedScenes.Add(sceneIndex);
-                loadedScenes.Remove(sceneIndex - 1);
+                //loadedScenes.Remove(sceneIndex - 1);
             }
         }
     }
@@ -67,6 +71,7 @@ public class SceneLoader : MonoBehaviour
     static public void UnloadPauseMenu()
     {
         SceneManager.UnloadSceneAsync(PauseMenu);
+        loadedScenes.Remove(PauseMenu);
     }
 
     static public void ReturnToMenu()
@@ -91,7 +96,21 @@ public class SceneLoader : MonoBehaviour
             AsyncOperation load = SceneManager.LoadSceneAsync(FirstLevel, LoadSceneMode.Additive);
             loading = true;
             sceneLoader.StartCoroutine(sceneLoader.CheckLoading(load));
+            loadedScenes.Add(Timer);
             loadedScenes.Add(FirstLevel);
+        }
+    }
+
+    static public void EndLevel()
+    {
+        if (!loading)
+        {
+            SceneManager.UnloadSceneAsync(sceneIndex);
+            loadedScenes.Remove(sceneIndex);
+            AsyncOperation load = SceneManager.LoadSceneAsync(VictoryScreen, LoadSceneMode.Additive);
+            loading = true;
+            sceneLoader.StartCoroutine(sceneLoader.CheckLoading(load));
+            loadedScenes.Add(VictoryScreen);
         }
     }
 
@@ -109,7 +128,10 @@ public class SceneLoader : MonoBehaviour
 
     static private void SetLevelActive()
     {
-        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(sceneIndex));
+        if (SceneManager.GetSceneByBuildIndex(sceneIndex).IsValid())
+        {
+            SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(sceneIndex));
+        }
     }
 
     IEnumerator CheckLoading(AsyncOperation load)

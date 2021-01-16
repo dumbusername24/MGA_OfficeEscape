@@ -17,6 +17,11 @@ public class MenuHandler : MonoBehaviour
         SceneLoader.StartGame();
     }
 
+    public void NextLevel()
+    {
+        SceneLoader.Progress();
+    }
+
     public void QuitGame()
     {
         Application.Quit();
