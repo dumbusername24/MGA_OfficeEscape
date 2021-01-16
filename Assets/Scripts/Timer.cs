@@ -11,11 +11,9 @@ public class Timer : MonoBehaviour
     static public int seconds = 0;
     static public int minutes = 0;
     static public bool timerOnOff = true;
-    static Timer instance;
 
     private void Start()
     {
-        instance = new Timer();
         timer = timerObject.GetComponent<TextMeshProUGUI>();
         timerOnOff = true;
     }
