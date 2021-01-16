@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿//using System.Diagnostics;
+using System.Net;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -125,6 +126,16 @@ public class EscButton : MonoBehaviour
                         hit.collider.GetComponent<AudioSource>().Pause();
                     }
                     
+                }
+                else if(tag == "Sparks")
+                {
+                    ParticleSystem particles = hit.collider.GetComponent<ParticleSystem>();
+                    particles.Stop();
+                    particles.Clear();
+                    if(particles.isStopped)
+                    {
+                        particles.Play();
+                    }
                 }
             }
         }
