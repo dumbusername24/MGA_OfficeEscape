@@ -46,7 +46,7 @@ public class SceneLoader : MonoBehaviour
                 //SceneManager.UnloadSceneAsync(sceneIndex - 1);
                 loadedScenes.Add(sceneIndex);
                 //loadedScenes.Remove(sceneIndex - 1);
-                Timer.timerOnOff = true;
+                //Timer.timerOnOff = true;
             }
         }
     }
@@ -156,6 +156,7 @@ public class SceneLoader : MonoBehaviour
             {
                 loading = false;
                 SetLevelActive();
+                Timer.timerOnOff = true;
             }
             yield return null;
         }
