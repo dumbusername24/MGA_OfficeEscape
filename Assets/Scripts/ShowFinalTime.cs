@@ -16,7 +16,6 @@ public class ShowFinalTime : MonoBehaviour
             this.GetComponent<TextMeshProUGUI>().SetText(Timer.minutes + ":" + Timer.seconds);
         }
         Timer.SaveGame();
-        Timer.Reset();
     }
     
 }

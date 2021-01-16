@@ -36,6 +36,7 @@ public class MenuHandler : MonoBehaviour
         //this has to be the index in the build queue (file > build settings)
         //SceneManager.LoadScene(0);
         SceneLoader.ReturnToMenu();
+        Timer.Reset();
     }
 
     public void ContinueGame()
