@@ -9,11 +9,12 @@ public class SceneLoader : MonoBehaviour
     static private List<int> loadedScenes;
     static private bool loading = false;
     static private SceneLoader sceneLoader;
-    const int MainMenu = 1;
-    const int PauseMenu = 2;
-    const int VictoryScreen = 6;
-    const int Timer = 3;
-    const int FirstLevel = 4;
+    const int MainMenuID = 1;
+    const int PauseMenuID = 2;
+    const int ActualVictoryScreenID = 4;
+    const int VictoryScreenID = 7;
+    const int TimerID = 3;
+    const int FirstLevelID = 5;
 
     private void Start()
     {
@@ -26,9 +27,10 @@ public class SceneLoader : MonoBehaviour
     {
         if (!loading)
         {
-            if (SceneManager.GetSceneByBuildIndex(VictoryScreen).IsValid())
+            if (SceneManager.GetSceneByBuildIndex(VictoryScreenID).IsValid())
             {
-                SceneManager.UnloadSceneAsync(VictoryScreen);
+                SceneManager.UnloadSceneAsync(VictoryScreenID);
+                loadedScenes.Remove(VictoryScreenID);
             }
             sceneIndex++;
             if (loadedScenes.Contains(sceneIndex))
@@ -44,6 +46,7 @@ public class SceneLoader : MonoBehaviour
                 //SceneManager.UnloadSceneAsync(sceneIndex - 1);
                 loadedScenes.Add(sceneIndex);
                 //loadedScenes.Remove(sceneIndex - 1);
+                Timer.timerOnOff = true;
             }
         }
     }
@@ -59,19 +62,19 @@ public class SceneLoader : MonoBehaviour
 
     static public void LoadPauseMenu()
     {
-        if (!loading && !loadedScenes.Contains(PauseMenu))
+        if (!loading && !loadedScenes.Contains(PauseMenuID))
         {
-            AsyncOperation load = SceneManager.LoadSceneAsync(PauseMenu, LoadSceneMode.Additive);
+            AsyncOperation load = SceneManager.LoadSceneAsync(PauseMenuID, LoadSceneMode.Additive);
             loading = true;
             sceneLoader.StartCoroutine(sceneLoader.CheckLoading(load));
-            loadedScenes.Add(PauseMenu);
+            loadedScenes.Add(PauseMenuID);
         }
     }
 
     static public void UnloadPauseMenu()
     {
-        SceneManager.UnloadSceneAsync(PauseMenu);
-        loadedScenes.Remove(PauseMenu);
+        SceneManager.UnloadSceneAsync(PauseMenuID);
+        loadedScenes.Remove(PauseMenuID);
     }
 
     static public void ReturnToMenu()
@@ -79,10 +82,10 @@ public class SceneLoader : MonoBehaviour
         if (!loading)
         {
             UnloadAll();
-            AsyncOperation load = SceneManager.LoadSceneAsync(MainMenu, LoadSceneMode.Additive);
+            AsyncOperation load = SceneManager.LoadSceneAsync(MainMenuID, LoadSceneMode.Additive);
             loading = true;
             sceneLoader.StartCoroutine(sceneLoader.CheckLoading(load));
-            loadedScenes.Add(MainMenu);
+            loadedScenes.Add(MainMenuID);
         }
     }
 
@@ -91,13 +94,13 @@ public class SceneLoader : MonoBehaviour
         if (!loading)
         {
             UnloadAll();
-            sceneIndex = FirstLevel;
-            SceneManager.LoadSceneAsync(Timer, LoadSceneMode.Additive);
-            AsyncOperation load = SceneManager.LoadSceneAsync(FirstLevel, LoadSceneMode.Additive);
+            sceneIndex = FirstLevelID;
+            SceneManager.LoadSceneAsync(TimerID, LoadSceneMode.Additive);
+            AsyncOperation load = SceneManager.LoadSceneAsync(FirstLevelID, LoadSceneMode.Additive);
             loading = true;
             sceneLoader.StartCoroutine(sceneLoader.CheckLoading(load));
-            loadedScenes.Add(Timer);
-            loadedScenes.Add(FirstLevel);
+            loadedScenes.Add(TimerID);
+            loadedScenes.Add(FirstLevelID);
         }
     }
 
@@ -107,10 +110,21 @@ public class SceneLoader : MonoBehaviour
         {
             SceneManager.UnloadSceneAsync(sceneIndex);
             loadedScenes.Remove(sceneIndex);
-            AsyncOperation load = SceneManager.LoadSceneAsync(VictoryScreen, LoadSceneMode.Additive);
-            loading = true;
-            sceneLoader.StartCoroutine(sceneLoader.CheckLoading(load));
-            loadedScenes.Add(VictoryScreen);
+            Timer.timerOnOff = false;
+            if (sceneIndex + 1 == VictoryScreenID)
+            {
+                AsyncOperation load = SceneManager.LoadSceneAsync(ActualVictoryScreenID, LoadSceneMode.Additive);
+                loading = true;
+                sceneLoader.StartCoroutine(sceneLoader.CheckLoading(load));
+                loadedScenes.Add(ActualVictoryScreenID);
+            }
+            else
+            {
+                AsyncOperation load = SceneManager.LoadSceneAsync(VictoryScreenID, LoadSceneMode.Additive);
+                loading = true;
+                sceneLoader.StartCoroutine(sceneLoader.CheckLoading(load));
+                loadedScenes.Add(VictoryScreenID);
+            }
         }
     }
 
@@ -119,10 +133,10 @@ public class SceneLoader : MonoBehaviour
         if (!loading)
         {
             UnloadAll();
-            AsyncOperation load = SceneManager.LoadSceneAsync(VictoryScreen, LoadSceneMode.Additive);
+            AsyncOperation load = SceneManager.LoadSceneAsync(VictoryScreenID, LoadSceneMode.Additive);
             loading = true;
             sceneLoader.StartCoroutine(sceneLoader.CheckLoading(load));
-            loadedScenes.Add(VictoryScreen);
+            loadedScenes.Add(VictoryScreenID);
         }
     }
 
